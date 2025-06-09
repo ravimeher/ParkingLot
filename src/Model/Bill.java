@@ -3,18 +3,19 @@ package Model;
 import Model.Enums.BillStatus;
 import Model.Enums.PaymentStatus;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Bill extends BaseModel{
     private double amount;
-    private Date exitTime;
+    private LocalDateTime exitTime;
     private BillStatus billStatus;
 
     public Bill() {
 
     }
 
-    public Bill(double amount, Date exitTime, BillStatus billStatus) {
+    public Bill(double amount, LocalDateTime exitTime, BillStatus billStatus) {
         this.amount = amount;
         this.exitTime = exitTime;
         this.billStatus = billStatus;
@@ -28,11 +29,11 @@ public class Bill extends BaseModel{
         this.amount = amount;
     }
 
-    public Date getExitTime() {
+    public LocalDateTime getExitTime() {
         return exitTime;
     }
 
-    public void setExitTime(Date exitTime) {
+    public void setExitTime(LocalDateTime exitTime) {
         this.exitTime = exitTime;
     }
 

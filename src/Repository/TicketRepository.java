@@ -8,9 +8,11 @@ import Model.Ticket;
 public class TicketRepository {
     private HashMap<Long, Ticket> ticketHashMap;
 
-    public TicketRepository(HashMap<Long, Ticket> ticketHashMap) {
-        this.ticketHashMap = ticketHashMap;
+    public TicketRepository() {
+        this.ticketHashMap =  new HashMap<>();
     }
+
+
 
     public Ticket get(Long ticketId) {
         Ticket ticket = ticketHashMap.get(ticketId);

@@ -2,17 +2,29 @@ package Model;
 
 import Model.Enums.ParkingSpotStatus;
 import Model.Enums.ParkingSpotType;
+import Model.Enums.VehicleType;
 
 public class ParkingSpot extends BaseModel{
+    private int number;
     private Vehicle parkedVehicle;
-    private ParkingSpotType parkingSpotType;
+    private VehicleType supportedVehicleType;
     private ParkingSpotStatus status;
 
     public ParkingSpot(){}
-    public ParkingSpot(Vehicle parkedVehicle, ParkingSpotType parkingSpotType, ParkingSpotStatus status) {
+
+    public ParkingSpot(int number, Vehicle parkedVehicle, VehicleType supportedVehicleType, ParkingSpotStatus status) {
+        this.number = number;
         this.parkedVehicle = parkedVehicle;
-        this.parkingSpotType = parkingSpotType;
+        this.supportedVehicleType = supportedVehicleType;
         this.status = status;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     public Vehicle getParkedVehicle() {
@@ -23,12 +35,12 @@ public class ParkingSpot extends BaseModel{
         this.parkedVehicle = parkedVehicle;
     }
 
-    public ParkingSpotType getParkingSpotType() {
-        return parkingSpotType;
+    public VehicleType getSupportedVehicleType() {
+        return supportedVehicleType;
     }
 
-    public void setParkingSpotType(ParkingSpotType parkingSpotType) {
-        this.parkingSpotType = parkingSpotType;
+    public void setSupportedVehicleType(VehicleType supportedVehicleType) {
+        this.supportedVehicleType = supportedVehicleType;
     }
 
     public ParkingSpotStatus getStatus() {
@@ -37,5 +49,15 @@ public class ParkingSpot extends BaseModel{
 
     public void setStatus(ParkingSpotStatus status) {
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "ParkingSpot{" +
+                "number=" + number +
+                ", parkedVehicle=" + parkedVehicle +
+                ", supportedVehicleType=" + supportedVehicleType +
+                ", status=" + status +
+                '}';
     }
 }

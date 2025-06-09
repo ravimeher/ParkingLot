@@ -7,8 +7,8 @@ import Model.ParkingFloor;
 public class ParkingFloorRepository {
     private HashMap<Long, ParkingFloor> parkingFloorHashMap;
 
-    public ParkingFloorRepository(HashMap<Long, ParkingFloor> parkingFloorHashMap) {
-        this.parkingFloorHashMap = parkingFloorHashMap;
+    public ParkingFloorRepository() {
+        this.parkingFloorHashMap = new HashMap<>();
     }
 
     public ParkingFloor get(Long parkingFloorId) {

@@ -6,18 +6,20 @@ import java.util.List;
 
 public class ParkingLot extends BaseModel{
     private List<ParkingFloor> parkingFloorList;
+    private List<Gate> gates;
     private String parkingLotName;
     private String address;
     private int capacity;
     private ParkingLotStatus parkingLotStatus;
     public ParkingLot(){}
 
-    public ParkingLot(List<ParkingFloor> parkingFloorList, String parkingLotName, String address, int capacity, ParkingLotStatus parkingLotStatus) {
-        this.parkingFloorList = parkingFloorList;
-        this.parkingLotName = parkingLotName;
-        this.address = address;
-        this.capacity = capacity;
-        this.parkingLotStatus = parkingLotStatus;
+
+    public List<Gate> getGates() {
+        return gates;
+    }
+
+    public void setGates(List<Gate> gates) {
+        this.gates = gates;
     }
 
     public List<ParkingFloor> getParkingFloorList() {

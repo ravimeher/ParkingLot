@@ -7,9 +7,10 @@ import Exception.*;
 public class ParkingSpotRepository {
     private HashMap<Long,ParkingSpot> parkingSpotHashMap;
 
-    public ParkingSpotRepository(HashMap<Long, ParkingSpot> parkingSpotHashMap) {
-        this.parkingSpotHashMap = parkingSpotHashMap;
+    public ParkingSpotRepository() {
+        this.parkingSpotHashMap = new HashMap<>();
     }
+
 
     public ParkingSpot get(Long parkingSpotId) {
         ParkingSpot parkingSpot = parkingSpotHashMap.get(parkingSpotId);

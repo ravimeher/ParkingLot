@@ -39,4 +39,13 @@ public class IssueTicketResponseDTO {
     public void setExceptionMessage(String exceptionMessage) {
         this.exceptionMessage = exceptionMessage;
     }
+
+    @Override
+    public String toString() {
+        return "IssueTicketResponseDTO{" +
+                "responseStatus=" + responseStatus +
+                ", ticket=" + ticket +
+                ", exceptionMessage='" + exceptionMessage + '\'' +
+                '}';
+    }
 }

@@ -39,4 +39,13 @@ public class Vehicle extends BaseModel {
     public void setColor(String color) {
         this.color = color;
     }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "type=" + type +
+                ", number='" + number + '\'' +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }
